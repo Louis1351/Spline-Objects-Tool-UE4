@@ -281,11 +281,11 @@ void ASplineObjects::AddMultipleInstance(const FTransform& _transform)
 	}
 	else if (IsDescendingStaticMesh)
 	{
-		index = (InstancedStaticMeshes.Num() - 1) - ((CurrentIndex - 1) % InstancedStaticMeshes.Num());
+		index = (InstancedStaticMeshes.Num() - 1) - (CurrentIndex % InstancedStaticMeshes.Num());
 	}
 	else
 	{
-		index = ((CurrentIndex - 1) % InstancedStaticMeshes.Num());
+		index = (CurrentIndex % InstancedStaticMeshes.Num());
 	}
 
 	if (index >= 0 && index < InstancedStaticMeshes.Num())
@@ -305,11 +305,11 @@ void ASplineObjects::AddMultipleActor(const FTransform& _transform)
 	}
 	else if (IsDescendingActor)
 	{
-		index = (BlueprintActors.Num() - 1) - ((CurrentIndex - 1) % BlueprintActors.Num());
+		index = (BlueprintActors.Num() - 1) - (CurrentIndex % BlueprintActors.Num());
 	}
 	else
 	{
-		index = ((CurrentIndex - 1) % BlueprintActors.Num());
+		index = (CurrentIndex % BlueprintActors.Num());
 	}
 
 	UChildActorComponent* newChild = NewObject<UChildActorComponent>(this);
@@ -331,7 +331,7 @@ void ASplineObjects::CreateObjectsAlongTheSurface()
 
 	PointsNumber = (spline->GetSplineLength() / Space);
 
-	for (int i = 1; i < PointsNumber; ++i)
+	for (int i = 0; i < PointsNumber; ++i)
 	{
 		CurrentIndex = i;
 
@@ -359,7 +359,7 @@ void ASplineObjects::CreateObjects()
 
 	PointsNumber = (spline->GetSplineLength() / Space);
 
-	for (int i = 1; i < PointsNumber; ++i)
+	for (int i = 0; i < PointsNumber; ++i)
 	{
 		CurrentIndex = i;
 
