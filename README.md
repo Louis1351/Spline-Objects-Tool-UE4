@@ -2,6 +2,8 @@
 A tool for Unreal Engine 4 which can spawn instanced Meshes / actors / decals along a spline.
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/pres.PNG)
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/pres2.PNG)
+
+# How to install<h3>
  
 # Spline Settings<h3>
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Spline_Settings.PNG)
