@@ -7,52 +7,58 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
  
 # Spline Settings<h3>
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Spline_Settings.PNG)
-* first
-* Second
-* Third
+* Type -
+* Close -
+* Follow Direction -
+* Inverse Direction -
+* Is Snapping -
+* Is Align to surface -
+* Snapping Radius -
  
 # Objects Settings<h3>
  
 ### Decal Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Decals_Settings.PNG)
-* first
-* Second
-* Third
+* Has Multiple Materials
  
 ### Instanced StaticMeshes Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/InstancedStaticMeshes_Settings.PNG)
-* first
-* Second
-* Third
+* Is Descending -
+* Is In Random Order -
+* Static Meshes -
  
 ### Actors Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Actors_Settings.PNG)
-* first
-* Second
-* Third
+* Is Descending -
+* Is In Random Order -
+* Blueprint Actors -
 
 # Transform Settings<h3>
  
 ### Location Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Location_Settings.PNG)
-* first
-* Second
-* Third
+* Constant -
+* Random in range -
+* Using Curve -
  
 ### Rotation Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Rotation_Settings.PNG)
-* first
-* Second
-* Third
+* Constant -
+* Lerp in Range -
+* Random in range -
+* Using Curve -
 
 ### Scale Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Scale_Settings.PNG)
-* first
-* Second
-* Third
+* Constant -
+* Lerp in Range -
+* Random in range -
+* Using Curve -
 
 # Debug Settings<h3>
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Debug_Settings.PNG)
-* first
-* Second
-* Third
+* Disable Visual -
+* Show arrows -
+* Color Direction -
+* Color Normal -
+* Size -
