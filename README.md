@@ -7,7 +7,7 @@
  # Objects Settings<h3>
  
  ### Decal Spawn Settings
- <img align="right" width="100" height="100" src=https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Decals_Settings.PNG>
+ <img align="right" width="512" height="512" src=https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Decals_Settings.PNG>
  
  ### Instanced StaticMeshes Spawn Settings
  ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/InstancedStaticMeshes_Settings.PNG)
