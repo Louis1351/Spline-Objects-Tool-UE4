@@ -49,3 +49,6 @@ A tool for Unreal Engine 4 which can spawn instanced Meshes / actors / decals al
 
 # Debug Settings<h3>
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Debug_Settings.PNG)
+* first
+* Second
+* Third
