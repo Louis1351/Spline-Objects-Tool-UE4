@@ -10,21 +10,21 @@
  <img align="right" src=https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Decals_Settings.PNG>
  
  ### Instanced StaticMeshes Spawn Settings
- ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/InstancedStaticMeshes_Settings.PNG)
+ <img align="right" src=https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/InstancedStaticMeshes_Settings.PNG>
  
  ### Actors Spawn Settings
- ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Actors_Settings.PNG)
+ <img align="right" src=https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Actors_Settings.PNG>
 
 # Transform Settings<h3>
  
 ### Location Settings
-![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Location_Settings.PNG)
+<img align="right" src= https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Location_Settings.PNG>
  
 ### Rotation Settings
-![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Rotation_Settings.PNG)
+<img align="right" src=https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Rotation_Settings.PNG>
  
 ### Scale Settings
-![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Scale_Settings.PNG)
+<img align="right" src=https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Scale_Settings.PNG>
  
 # Debug Settings<h3>
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Debug_Settings.PNG)
