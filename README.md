@@ -6,24 +6,24 @@
  
  # Objects Settings<h3>
  
- # Decal Spawn Settings<h2>
+ ### Decal Spawn Settings<h2>
  ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Decals_Settings.PNG)
  
- # Instanced StaticMeshes Spawn Settings<h2>
+ ### Instanced StaticMeshes Spawn Settings<h2>
  ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/InstancedStaticMeshes_Settings.PNG)
  
- # Actors Spawn Settings<h2>
+ ### Actors Spawn Settings<h2>
  ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Actors_Settings.PNG)
 
 # Transform Settings<h3>
  
-# Location Settings<h2>
+### Location Settings<h2>
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Location_Settings.PNG)
  
-# Rotation Settings<h2>
+### Rotation Settings<h2>
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Rotation_Settings.PNG)
  
-# Scale Settings<h2>
+### Scale Settings<h2>
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Scale_Settings.PNG)
  
 # Debug Settings<h3>
