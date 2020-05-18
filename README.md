@@ -7,15 +7,15 @@ A tool for Unreal Engine 4 which can spawn instanced Meshes / actors / decals al
 # Objects Settings<h3>
  
 ### Decal Spawn Settings
-<img align="right" src=https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Decals_Settings.PNG width=90>
+<img align="right" src=https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Decals_Settings.PNG width=200>
 dgfdgdfgdfgdfgdfgdfgdfgdfdgdfsfsdfsdfsdfsdfsdfsdff
  
 ### Instanced StaticMeshes Spawn Settings
-<img align="right" src=https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/InstancedStaticMeshes_Settings.PNG width=90>
+<img align="right" src=https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/InstancedStaticMeshes_Settings.PNG width=200>
 dgfdgdfgdfgdfgdfgdfgdfgdfdgdfsfsdfsdfsdfsdfsdfsdff
  
 ### Actors Spawn Settings
-<img align="right" src=https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Actors_Settings.PNG width=90>
+<img align="right" src=https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Actors_Settings.PNG width=200>
 dgfdgdfgdfgdfgdfgdfgdfgdfdgdfsfsdfsdfsdfsdfsdfsdff
 
 # Transform Settings<h3>
