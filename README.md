@@ -17,12 +17,16 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
  
 # Objects Settings<h3>
  
-### Decal Spawn Settings
+### Decals Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Decals_Settings.PNG)
-* Has Multiple Materials
+* Has One Unique Material -
+* Is Descending -
+* Is In Random Order -
+* Decals -
  
 ### Instanced StaticMeshes Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/InstancedStaticMeshes_Settings.PNG)
+* Has One Unique Material -
 * Is Descending -
 * Is In Random Order -
 * Static Meshes -
@@ -62,3 +66,6 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
 * Color Direction -
 * Color Normal -
 * Size -
+ 
+# To Do<h3>
+* Add Spline Meshes
