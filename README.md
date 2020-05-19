@@ -10,6 +10,7 @@ Add a Plugins folder into your project and past the folder Plugins/SplineObjects
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/folder_Settings.PNG)
  
 ### More Details
+You can find some examples of the use 
  
 # Spline Settings<h3>
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Spline_Settings.PNG)
