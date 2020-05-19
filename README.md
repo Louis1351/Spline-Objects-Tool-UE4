@@ -66,3 +66,6 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
 * Color Direction -
 * Color Normal -
 * Size -
+ 
+# To Do<h3>
+* Add Spline Meshes
