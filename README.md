@@ -52,14 +52,14 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
 ### Rotation Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Rotation_Settings.PNG)
 * **Constant** - To spawn objects with the same rotation.
-* **Lerp in Range** -
+* **Lerp in Range** - To spawn objects with a rotation lerping from min to max value.
 * **Random in range** - To spawn objects with a random rotation between two values.
 * **Using Curve** - To spawn objects with a rotation corresponding to a curve.
 
 ### Scale Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Scale_Settings.PNG)
 * **Constant** - To spawn objects with the same scale.
-* **Lerp in Range** -
+* **Lerp in Range** - To spawn objects with a scale lerping from min to max value.
 * **Random in range** - To spawn objects with a random scale between two values.
 * **Using Curve** - To spawn objects with a scale corresponding to a curve.
 
