@@ -65,11 +65,11 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
 
 # Debug Settings<h3>
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Debug_Settings.PNG)
-* **Disable Visual** -
-* **Show arrows** -
-* **Color Direction** -
-* **Color Normal** -
-* **Size** -
+* **Disable Visual** - To Disable Visual if the spline is too long.
+* **Show arrows** - To display arrow components in the editor view.
+* **Color Direction** - To change color for the directionnal arrow.
+* **Color Normal** - To change color for the normal surface arrow.
+* **Size** - To change arrow size.
  
 # To Do<h3>
 * Add Spline Meshes.
