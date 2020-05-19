@@ -1,9 +1,14 @@
 # Spline-Objects-Tool
 A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / decals along a spline in the editor.
+The spline's points can snap to the environment and the objects can be aligned to the surface.
+
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/pres.PNG)
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/pres2.PNG)
 
 # How to install<h3>
+Add a Plugins folder into your project and past the folder Plugins/SplineObjects
+![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/folder_Settings.PNG)
+ 
 ### More Details
  
 # Spline Settings<h3>
