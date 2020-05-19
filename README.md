@@ -14,7 +14,7 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
 * **Inverse Direction** - To invert the spline's direction. (Only works when Follow Direction is checked)
 * **Is Snapping** - Points Of the spline snap to the nearest StaticMesh.
 * **Is Align to surface** - Each object Align to surface. (Only works when Is Snapping is checked)
-* **Snapping Radius** - (Only works when Is Snapping is checked)
+* **Snapping Radius** - Radius to dectect the nearest StaticMesh. (Only works when Is Snapping is checked)
 * **Space** - Space between each object.  
  
 # Objects Settings<h3>
