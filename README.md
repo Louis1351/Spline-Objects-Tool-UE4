@@ -27,46 +27,47 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
  
 ### Instanced StaticMeshes Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/InstancedStaticMeshes_Settings.PNG)
-* Has One Unique Material -
-* Is Descending -
-* Is In Random Order -
-* Static Meshes -
+* **Has One Unique Material** -
+* **Is Descending** -
+* **Is In Random Order** -
+* **Static Meshes** -
  
 ### Actors Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Actors_Settings.PNG)
-* Is Descending -
-* Is In Random Order -
-* Blueprint Actors -
+* **Is Descending** -
+* **Is In Random Order** -
+* **Blueprint Actors** -
 
 # Transform Settings<h3>
  
 ### Location Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Location_Settings.PNG)
-* Constant -
-* Random in range -
-* Using Curve -
+* **Constant** -
+* **Random in range** -
+* **Using Curve** -
  
 ### Rotation Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Rotation_Settings.PNG)
-* Constant -
-* Lerp in Range -
-* Random in range -
-* Using Curve -
+* **Constant** -
+* **Lerp in Range** -
+* **Random in range** -
+* **Using Curve** -
 
 ### Scale Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Scale_Settings.PNG)
-* Constant -
-* Lerp in Range -
-* Random in range -
-* Using Curve -
+* **Constant** -
+* **Lerp in Range** -
+* **Random in range** -
+* **Using Curve** -
 
 # Debug Settings<h3>
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Debug_Settings.PNG)
-* Disable Visual -
-* Show arrows -
-* Color Direction -
-* Color Normal -
-* Size -
+* **Disable Visual** -
+* **Show arrows** -
+* **Color Direction** -
+* **Color Normal** -
+* **Size** -
  
 # To Do<h3>
-* Add Spline Meshes
+* Add Spline Meshes.
+* Add multiple materials for each InstancedStaticMeshes.
