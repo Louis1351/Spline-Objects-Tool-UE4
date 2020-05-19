@@ -6,7 +6,8 @@ The spline's points can snap to the environment and the objects can be aligned t
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/pres2.PNG)
 
 # How to install<h3>
- Add a Plugins folder into your project and past the folder 
+Add a Plugins folder into your project and past the folder Plugins/SplineObjects
+ 
 ### More Details
  
 # Spline Settings<h3>
