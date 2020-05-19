@@ -22,46 +22,46 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
 ### Decals Spawn Settings (Only works when Is Snapping is checked)
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Decals_Settings.PNG)
 * **Has One Unique Material** - To use Decal Material for all Decals.
-* **Is Descending** - To Spawn Decals in Descending Order.
-* **Is In Random Order** - To Spawn Decals in Random Order.
+* **Is Descending** - To spawn Decals in Descending Order.
+* **Is In Random Order** - To spawn Decals in Random Order.
 * **Decals** - To add new Decal in the array.
 * **Decal Material** - One Unique Material. (Only works when Has One Unique Material is checked)
  
 ### Instanced StaticMeshes Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/InstancedStaticMeshes_Settings.PNG)
 * **Has One Unique Material** - To use Static Mesh Material for all Static Meshes.
-* **Is Descending** - To Spawn Static meshes in Descending Order.
-* **Is In Random Order** - To Spawn Static meshes in Random Order.
+* **Is Descending** - To spawn Static meshes in Descending Order.
+* **Is In Random Order** - To spawn Static meshes in Random Order.
 * **Static Meshes** - To add new static mesh in the array.
 * **Static Mesh Material** - One Unique Material. (Only works when Has One Unique Material is checked)
  
 ### Actors Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Actors_Settings.PNG)
-* **Is Descending** - To Spawn Actors in Descending Order.
-* **Is In Random Order** - To Spawn Actors in Random Order.
+* **Is Descending** - To spawn Actors in Descending Order.
+* **Is In Random Order** - To spawn Actors in Random Order.
 * **Blueprint Actors** - To add new Actor in the array.
 
 # Transform Settings<h3>
  
 ### Location Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Location_Settings.PNG)
-* **Constant** -
-* **Random in range** -
-* **Using Curve** -
+* **Constant** - To spawn objects with the same offset.
+* **Random in range** - To spawn objects with a random offset between two values.
+* **Using Curve** - To spawn objects with an offset corresponding to a curve.
  
 ### Rotation Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Rotation_Settings.PNG)
-* **Constant** -
+* **Constant** - To spawn objects with the same rotation.
 * **Lerp in Range** -
-* **Random in range** -
-* **Using Curve** -
+* **Random in range** - To spawn objects with a random rotation between two values.
+* **Using Curve** - To spawn objects with a rotation corresponding to a curve.
 
 ### Scale Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Scale_Settings.PNG)
-* **Constant** -
+* **Constant** - To spawn objects with the same scale.
 * **Lerp in Range** -
-* **Random in range** -
-* **Using Curve** -
+* **Random in range** - To spawn objects with a random scale between two values.
+* **Using Curve** - To spawn objects with a scale corresponding to a curve.
 
 # Debug Settings<h3>
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Debug_Settings.PNG)
