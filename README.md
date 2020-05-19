@@ -21,10 +21,10 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
  
 ### Decals Spawn Settings (Only works when Is Snapping is checked)
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Decals_Settings.PNG)
-* Has One Unique Material -
-* Is Descending -
-* Is In Random Order -
-* Decals -
+* **Has One Unique Material** -
+* **Is Descending** -
+* **Is In Random Order** -
+* **Decals** -
  
 ### Instanced StaticMeshes Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/InstancedStaticMeshes_Settings.PNG)
