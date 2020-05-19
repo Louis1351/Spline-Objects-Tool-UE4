@@ -4,15 +4,16 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/pres2.PNG)
 
 # How to install<h3>
+### More Details
  
 # Spline Settings<h3>
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Spline_Settings.PNG)
-* Type -
-* Close -
-* Follow Direction -
-* Inverse Direction -
-* Is Snapping -
-* Is Align to surface -
+* Type - To select the current object.
+* Close - To close the spline.
+* Follow Direction - Each object changes their rotation corresponding to the spline's direction.  
+* Inverse Direction - To invert the spline's direction.
+* Is Snapping - Points Of the spline snap to the nearest StaticMesh.
+* Is Align to surface - Each object has 
 * Snapping Radius -
  
 # Objects Settings<h3>
