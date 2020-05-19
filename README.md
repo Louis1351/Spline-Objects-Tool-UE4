@@ -65,7 +65,7 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
 
 # Debug Settings<h3>
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Debug_Settings.PNG)
-* **Disable Visual** - To Disable Visual if the spline is too long (to not spawn objects each frame).
+* **Disable Visual** - To disable Visual if the spline is too long (to not spawn objects each frame).
 * **Show arrows** - To display arrow components in the editor view.
 * **Color Direction** - To change color for the directionnal arrow.
 * **Color Normal** - To change color for the normal surface arrow.
