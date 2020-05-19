@@ -25,6 +25,7 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
 * **Is Descending** -
 * **Is In Random Order** -
 * **Decals** -
+* **Decal Material** -
  
 ### Instanced StaticMeshes Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/InstancedStaticMeshes_Settings.PNG)
@@ -32,6 +33,7 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
 * **Is Descending** -
 * **Is In Random Order** -
 * **Static Meshes** -
+* **Static Mesh Material** -
  
 ### Actors Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Actors_Settings.PNG)
