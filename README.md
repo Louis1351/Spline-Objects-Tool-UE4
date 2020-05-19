@@ -25,7 +25,7 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
 * **Is Descending** - To Spawn Decals in Descending Order.
 * **Is In Random Order** - To Spawn Decals in Random Order.
 * **Decals** - To add new Decal in the array.
-* **Decal Material** -
+* **Decal Material** - One Unique Material. (Only works when Has One Unique Material is checked)
  
 ### Instanced StaticMeshes Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/InstancedStaticMeshes_Settings.PNG)
@@ -33,7 +33,7 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
 * **Is Descending** - To Spawn Static meshes in Descending Order.
 * **Is In Random Order** - To Spawn Static meshes in Random Order.
 * **Static Meshes** - To add new static mesh in the array.
-* **Static Mesh Material** -
+* **Static Mesh Material** - One Unique Material. (Only works when Has One Unique Material is checked)
  
 ### Actors Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Actors_Settings.PNG)
