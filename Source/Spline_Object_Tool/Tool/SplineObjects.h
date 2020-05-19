@@ -15,17 +15,49 @@ enum class ESplineType : uint8
 	SplineMesh					UMETA(DisplayName = "Spline Mesh")
 };
 
+USTRUCT(BlueprintType)
+struct FDecalData
+{
+	GENERATED_BODY()
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float FadeInDelay = 0.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float FadeInDuration = 0.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float FadeOutDelay = 0.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float FadeOutDuration = 0.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float FadeScreenSize = 0.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool DestroyOwnerAfterFade = true;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int SortOrder = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class UMaterialInterface* Material;
+};
+
+USTRUCT(BlueprintType)
+struct FStaticMeshData
+{
+	GENERATED_BODY()
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class UStaticMesh* StaticMesh;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class UMaterialInterface* Material;
+};
+
 UCLASS()
 class SPLINE_OBJECT_TOOL_API ASplineObjects : public AActor
 {
 	GENERATED_BODY()
 
 private:
-
-	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
-	class UMaterialInstanceDynamic* CurrentMaterial;
-	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
-	TArray<class UMaterialInstanceDynamic*> CurrentMaterials;
 
 	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	FVector CurrentOffset = FVector::ZeroVector;
@@ -51,6 +83,8 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void SnapSplinePoint();
 	UFUNCTION(BlueprintCallable)
+	void AddMultipleDecal(const FTransform& _transform);
+	UFUNCTION(BlueprintCallable)
 	void AddMultipleInstance(const FTransform& _transform);
 	UFUNCTION(BlueprintCallable)
 	void AddMultipleActor(const FTransform& _transform);
@@ -69,9 +103,8 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void MeshTransformFollow(FVector& _direction, const FVector& _normal, FTransform& _transform, bool _isAlignToSurface);
 	UFUNCTION(BlueprintCallable)
-	void SetDecalComponent(class UDecalComponent* _decal);
-	UFUNCTION(BlueprintCallable)
 	void SetArrow(class UArrowComponent* _arrow, const FLinearColor& _color, const float _size, const float _screenSize);
+
 protected:
 	/////////////////////////////////Spline//////////////////////////////////
 
@@ -168,13 +201,18 @@ protected:
 
 	/////////////////////////////////StaticMeshes////////////////////////////
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, DisplayName = "Has One Unique Material", Category = "StaticMeshes Spawn Settings")
+	bool HasOneUniqueMaterialStaticMesh = false;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, DisplayName = "Is Descending", Category = "StaticMeshes Spawn Settings")
 	bool IsDescendingStaticMesh = false;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, DisplayName = "Is In Random Order", Category = "StaticMeshes Spawn Settings")
 	bool IsInRandomOrderStaticMesh = false;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "StaticMeshes Spawn Settings")
-	TArray<class UStaticMesh*> StaticMeshes;
+	TArray<FStaticMeshData> StaticMeshes;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "StaticMeshes Spawn Settings", meta = (EditCondition = "HasOneUniqueMaterialStaticMesh"))
+	class UMaterialInterface* StaticMeshMaterial;
 
 	/////////////////////////////////Actors//////////////////////////////////
 
@@ -182,31 +220,24 @@ protected:
 	bool IsDescendingActor = false;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, DisplayName = "Is In Random Order", Category = "Actors Spawn Settings")
 	bool IsInRandomOrderActor = false;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actors Spawn Settings")
 	TArray<TSubclassOf<class AActor>> BlueprintActors;
 
 	////////////////////////////////Decal///////////////////////////////////////
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Decal Spawn Settings")
-	bool HasMultipleMaterials;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, DisplayName = "Has One Unique Material", Category = "Decals Spawn Settings")
+	bool HasOneUniqueMaterialDecal = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, DisplayName = "Is Descending", Category = "Decals Spawn Settings")
+	bool IsDescendingDecal = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, DisplayName = "Is In Random Order", Category = "Decals Spawn Settings")
+	bool IsInRandomOrderDecal = false;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Decal Spawn Settings")
-	float FadeInDelay = 0.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Decal Spawn Settings")
-	float FadeInDuration = 0.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Decal Spawn Settings")
-	float FadeOutDelay = 0.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Decal Spawn Settings")
-	float FadeOutDuration = 0.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Decal Spawn Settings")
-	float FadeScreenSize = 0.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Decal Spawn Settings")
-	bool DestroyOwnerAfterFade = true;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Decal Spawn Settings")
-	int SortOrder = 0;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Decals Spawn Settings")
+	TArray<FDecalData> Decals;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Decal Spawn Settings", meta = (EditCondition = "IsSnapping"))
-	class UMaterialInterface* Material;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Decals Spawn Settings", meta = (EditCondition = "HasOneUniqueMaterialDecal"))
+	class UMaterialInterface* DecalMaterial;
 
 	//////////////////////////////////////////////////////////////////////////
 

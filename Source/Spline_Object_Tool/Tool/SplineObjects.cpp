@@ -75,10 +75,6 @@ void ASplineObjects::Initialize()
 	switch (Type)
 	{
 	case ESplineType::Decal:
-		if (!HasMultipleMaterials)
-		{
-			CurrentMaterial = UKismetMaterialLibrary::CreateDynamicMaterialInstance(this, Material);
-		}
 
 		break;
 	case ESplineType::InstancedStaticMesh:
@@ -86,9 +82,21 @@ void ASplineObjects::Initialize()
 		{
 			UInstancedStaticMeshComponent* comp = NewObject<UInstancedStaticMeshComponent>(this);
 			comp->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepWorldTransform);
-			comp->SetStaticMesh(item);
 			comp->RegisterComponent();
 			comp->CreationMethod = EComponentCreationMethod::SimpleConstructionScript;
+
+			if (item.StaticMesh)
+			{
+				comp->SetStaticMesh(item.StaticMesh);
+
+				if (HasOneUniqueMaterialStaticMesh)
+				{
+					comp->SetMaterial(0, StaticMeshMaterial);
+				}
+				else
+					comp->SetMaterial(0, item.Material);
+			}
+
 			InstancedStaticMeshes.Add(comp);
 		}
 
@@ -268,6 +276,55 @@ void ASplineObjects::SnapSplinePoint()
 	}
 }
 
+void ASplineObjects::AddMultipleDecal(const FTransform& _transform)
+{
+	UDecalComponent* decalComp = nullptr;
+	int index = 0;
+
+	if (Decals.Num() <= 0)
+		return;
+
+	if (IsInRandomOrderDecal)
+	{
+		index = UKismetMathLibrary::RandomIntegerInRange(0, Decals.Num() - 1);
+	}
+	else if (IsDescendingDecal)
+	{
+		index = (Decals.Num() - 1) - (CurrentIndex % Decals.Num());
+	}
+	else
+	{
+		index = (CurrentIndex % Decals.Num());
+	}
+
+
+	decalComp = NewObject<UDecalComponent>(this);
+	decalComp->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepWorldTransform);
+	decalComp->SetWorldTransform(_transform);
+	decalComp->RegisterComponent();
+	decalComp->CreationMethod = EComponentCreationMethod::SimpleConstructionScript;
+
+	if (index >= 0 && index < Decals.Num())
+	{
+		decalComp->SetFadeIn(Decals[index].FadeInDelay, Decals[index].FadeInDuration);
+		decalComp->SetFadeOut(Decals[index].FadeOutDelay, Decals[index].FadeOutDuration, Decals[index].DestroyOwnerAfterFade);
+		decalComp->SetFadeScreenSize(Decals[index].FadeScreenSize);
+		decalComp->SetSortOrder(Decals[index].SortOrder);
+
+		decalComp->DecalSize = CurrentScale;
+
+		if (!HasOneUniqueMaterialDecal)
+		{
+			decalComp->SetDecalMaterial(Decals[index].Material);
+		}
+		else
+		{
+			decalComp->SetDecalMaterial(DecalMaterial);
+		}
+
+	}
+}
+
 void ASplineObjects::AddMultipleInstance(const FTransform& _transform)
 {
 	int index = 0;
@@ -289,7 +346,9 @@ void ASplineObjects::AddMultipleInstance(const FTransform& _transform)
 	}
 
 	if (index >= 0 && index < InstancedStaticMeshes.Num())
+	{
 		InstancedStaticMeshes[index]->AddInstance(_transform);
+	}
 }
 
 void ASplineObjects::AddMultipleActor(const FTransform& _transform)
@@ -393,7 +452,6 @@ void ASplineObjects::CreateSnappingObject(const FHitResult& _hit, FVector& _dire
 {
 	FVector HitNormal = FVector::ZeroVector;
 	FTransform CurrentTransform = FTransform::Identity;
-	UDecalComponent* decalComp = nullptr;
 
 	HitNormal = _hit.ImpactNormal;
 	CurrentTransform = UKismetMathLibrary::MakeTransform(CurrentOffset + _hit.ImpactPoint, HitNormal.Rotation(), CurrentScale);
@@ -411,12 +469,7 @@ void ASplineObjects::CreateSnappingObject(const FHitResult& _hit, FVector& _dire
 			CurrentTransform = UKismetMathLibrary::MakeTransform(CurrentTransform.GetLocation(), newRotation, FVector::OneVector);
 		}
 
-		decalComp = NewObject<UDecalComponent>(this);
-		decalComp->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepWorldTransform);
-		decalComp->SetWorldTransform(CurrentTransform);
-		decalComp->RegisterComponent();
-		decalComp->CreationMethod = EComponentCreationMethod::SimpleConstructionScript;
-		SetDecalComponent(decalComp);
+		AddMultipleDecal(CurrentTransform);
 
 		break;
 	case ESplineType::InstancedStaticMesh:
@@ -552,25 +605,6 @@ void ASplineObjects::MeshTransformFollow(FVector& _direction, const FVector& _no
 
 	FRotator newRotation = UKismetMathLibrary::ComposeRotators(CurrentRotation, UKismetMathLibrary::MakeRotFromZX(CurrentNormal, CurrentDirection));
 	_transform = UKismetMathLibrary::MakeTransform(_transform.GetLocation(), newRotation, _transform.GetScale3D());
-}
-
-void ASplineObjects::SetDecalComponent(UDecalComponent* _decal)
-{
-	_decal->SetFadeIn(FadeInDelay, FadeInDuration);
-	_decal->SetFadeOut(FadeOutDelay, FadeOutDuration, DestroyOwnerAfterFade);
-	_decal->SetFadeScreenSize(FadeScreenSize);
-	_decal->SetSortOrder(SortOrder);
-	_decal->DecalSize = CurrentScale;
-	if (HasMultipleMaterials)
-	{
-		UMaterialInstanceDynamic* inst = UKismetMaterialLibrary::CreateDynamicMaterialInstance(this, Material);
-		CurrentMaterials.Add(inst);
-		_decal->SetDecalMaterial(inst);
-	}
-	else
-	{
-		_decal->SetDecalMaterial(CurrentMaterial);
-	}
 }
 
 void ASplineObjects::SetArrow(UArrowComponent* _arrow, const FLinearColor& _color, const float _size, const float _screenSize)
