@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "SplineObjects",
+	"Description": "A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / decals along a spline in the editor.",
+	"Category": "Other",
+	"CreatedBy": "Louis SIANI",
+	"CreatedByURL": "https://github.com/Louis1351",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "SplineObjects",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
