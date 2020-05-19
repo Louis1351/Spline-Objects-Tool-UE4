@@ -21,25 +21,25 @@ A tool for Unreal Engine 4 which allows to spawn instanced Meshes / actors / dec
  
 ### Decals Spawn Settings (Only works when Is Snapping is checked)
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Decals_Settings.PNG)
-* **Has One Unique Material** -
-* **Is Descending** -
-* **Is In Random Order** -
-* **Decals** -
+* **Has One Unique Material** - To use Decal Material for all Decals.
+* **Is Descending** - To Spawn Decals in Descending Order.
+* **Is In Random Order** - To Spawn Decals in Random Order.
+* **Decals** - To add new Decal in the array.
 * **Decal Material** -
  
 ### Instanced StaticMeshes Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/InstancedStaticMeshes_Settings.PNG)
-* **Has One Unique Material** -
-* **Is Descending** -
-* **Is In Random Order** -
-* **Static Meshes** -
+* **Has One Unique Material** - To use Static Mesh Material for all Static Meshes.
+* **Is Descending** - To Spawn Static meshes in Descending Order.
+* **Is In Random Order** - To Spawn Static meshes in Random Order.
+* **Static Meshes** - To add new static mesh in the array.
 * **Static Mesh Material** -
  
 ### Actors Spawn Settings
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/Actors_Settings.PNG)
-* **Is Descending** -
-* **Is In Random Order** -
-* **Blueprint Actors** -
+* **Is Descending** - To Spawn Actors in Descending Order.
+* **Is In Random Order** - To Spawn Actors in Random Order.
+* **Blueprint Actors** - To add new Actor in the array.
 
 # Transform Settings<h3>
  
