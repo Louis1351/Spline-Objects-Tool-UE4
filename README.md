@@ -6,7 +6,7 @@ The spline's points can snap to the environment and the objects can be aligned t
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/pres2.PNG)
 
 # How to install<h3>
-Create a Plugins folder into your project and paste the folder SplineObjects which is located in ToExport/Plugins/.
+Create a Plugins folder into your project and paste the folder SplineObjects which is located into ToExport/Plugins/.
 ![](https://github.com/Louis1351/Spline-Objects-Tool/blob/master/Images/folder_Settings.PNG)
  
 Now you can create some Spline Objects Actors.
